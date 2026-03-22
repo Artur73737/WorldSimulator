@@ -1,46 +1,77 @@
 <svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="grad-core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D3436" />
+      <stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="grad-history" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF8C00" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="grad-tech" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#3A7BD5" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <!-- Glow Filters -->
+    <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-blue" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
   <style>
-    @keyframes orbit-1 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    @keyframes orbit-2 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
-    @keyframes pulse { 0%, 100% { opacity: 0.2; transform: scale(0.98); } 50% { opacity: 0.5; transform: scale(1.02); } }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+    @keyframes rotate-main { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes rotate-inv { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+    @keyframes breath { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.05); opacity: 1; } }
+    @keyframes scan { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
     
-    .orbit-1 { animation: orbit-1 60s linear infinite; transform-origin: 300px 200px; }
-    .orbit-2 { animation: orbit-2 40s linear infinite; transform-origin: 300px 200px; }
-    .core { animation: pulse 4s ease-in-out infinite; transform-origin: 300px 200px; }
-    .floating { animation: float 6s ease-in-out infinite; }
+    .layer-history { animation: rotate-main 40s linear infinite; transform-origin: 300px 200px; }
+    .layer-tech { animation: rotate-inv 25s linear infinite; transform-origin: 300px 200px; }
+    .core-sphere { animation: breath 8s ease-in-out infinite; transform-origin: 300px 200px; }
+    .scanning-line { stroke-dasharray: 4 10; animation: scan 12s linear infinite; }
     
-    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .node-gold { fill: #FFD700; filter: url(#glow-gold); }
+    .node-blue { fill: #00D2FF; filter: url(#glow-blue); }
   </style>
 
-  <!-- Outer Ring -->
-  <circle cx="300" cy="200" r="180" stroke="#F0F0F0" stroke-width="1" stroke-dasharray="10 20" />
-  
-  <!-- Main Grid -->
-  <g class="orbit-1">
-    <ellipse cx="300" cy="200" rx="150" ry="60" stroke="#D1D1D1" stroke-width="0.5" />
-    <ellipse cx="300" cy="200" rx="60" ry="150" stroke="#D1D1D1" stroke-width="0.5" />
-    <circle cx="300" cy="50" r="4" fill="#000" />
-    <circle cx="300" cy="350" r="4" fill="#000" />
+  <!-- Background Ambience -->
+  <circle cx="300" cy="200" r="180" stroke="#F8F9FA" stroke-width="0.5" />
+
+  <!-- Layer: History (Gold/Orange) -->
+  <g class="layer-history">
+    <ellipse cx="300" cy="200" rx="160" ry="50" stroke="url(#grad-history)" stroke-width="1.5" />
+    <ellipse cx="300" cy="200" rx="50" ry="160" stroke="url(#grad-history)" stroke-width="1.5" />
+    <circle cx="300" cy="40" r="5" class="node-gold" />
+    <circle cx="300" cy="360" r="5" class="node-gold" />
   </g>
 
-  <!-- Secondary Motion -->
-  <g class="orbit-2">
-    <ellipse cx="300" cy="200" rx="120" ry="120" stroke="#E5E5E5" stroke-width="0.3" stroke-dasharray="2 2" />
-    <circle cx="420" cy="200" r="2.5" fill="#666" />
-    <circle cx="180" cy="200" r="2.5" fill="#666" />
+  <!-- Layer: Modern/Simulation (Blue) -->
+  <g class="layer-tech">
+    <circle cx="300" cy="200" r="130" stroke="url(#grad-tech)" stroke-width="1" stroke-dasharray="5 5" class="scanning-line" />
+    <circle cx="430" cy="200" r="4" class="node-blue" />
+    <circle cx="170" cy="200" r="4" class="node-blue" />
+    <path d="M200 130 Q300 100 400 130" stroke="#00D2FF" stroke-width="0.5" stroke-opacity="0.3" fill="none" />
   </g>
 
-  <!-- Core Element -->
-  <g class="core">
-    <circle cx="300" cy="200" r="70" stroke="#000" stroke-width="0.75" />
-    <circle cx="300" cy="200" r="60" stroke="#000" stroke-width="0.2" stroke-opacity="0.3" />
+  <!-- Central Core -->
+  <g class="core-sphere">
+    <!-- Outer Glow -->
+    <circle cx="300" cy="200" r="85" fill="#00D2FF" fill-opacity="0.03" />
+    <!-- Main Body -->
+    <circle cx="300" cy="200" r="75" fill="black" stroke="#E5E5E5" stroke-width="0.5" />
+    <!-- Abstract Data Mesh -->
+    <path d="M260 200 L300 160 L340 200 L300 240 Z" stroke="#FFD700" stroke-width="0.7" fill-opacity="0.1" />
+    <circle cx="300" cy="200" r="2" fill="#00D2FF" />
   </g>
 
-  <!-- Abstract Simulation Nodes -->
-  <circle cx="280" cy="180" r="1.5" fill="#000" />
-  <circle cx="320" cy="220" r="1.5" fill="#000" />
-  <circle cx="310" cy="185" r="1.5" fill="#000" />
-  <path d="M280 180 L310 185 L320 220" stroke="#000" stroke-width="0.2" fill="none" stroke-opacity="0.4" />
+  <!-- Connectors -->
+  <line x1="300" y1="40" x2="300" y2="125" stroke="#FFD700" stroke-width="0.2" stroke-opacity="0.4" />
+  <line x1="300" y1="360" x2="300" y2="275" stroke="#FFD700" stroke-width="0.2" stroke-opacity="0.4" />
 
 </svg>
