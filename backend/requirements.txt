@@ -1,0 +1,34 @@
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# Database
+sqlalchemy==2.0.25
+alembic==1.13.1
+aiosqlite>=0.19.0
+asyncpg==0.29.0
+psycopg2-binary==2.9.9
+
+# Task Queue
+celery[redis]==5.3.6
+redis==5.0.1
+
+# LLM Integration
+openai==1.12.0
+httpx==0.26.0
+
+# Configuration & Utils
+pydantic==2.6.1
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+python-json-logger==2.0.7
+
+# SSE Support
+sse-starlette==2.0.0
+
+# Testing
+pytest==7.4.4
+pytest-asyncio==0.23.4
+
+# UUID generation
+uuid-utils==0.6.1
