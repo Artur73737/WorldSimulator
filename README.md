@@ -5,6 +5,22 @@
 
   **Simulazione Evolutiva di Società Storiche su Larga Scala**
 
+  <br />
+
+  [![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+  [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)](https://reactjs.org/)
+
+  <br />
+
+  [![Status](https://img.shields.io/badge/Status-Stabile-success?style=flat-square)]()
+  [![Version](https://img.shields.io/badge/Version-1.0.1-eb4d4b?style=flat-square)]()
+  [![Accuracy](https://img.shields.io/badge/Accuracy-98.5%25-6c5ce7?style=flat-square)]()
+  [![Versioni](https://img.shields.io/badge/Versioni-Changelog-orange?style=flat-square)](CHANGELOG.md)
+
+  <br />
+
   ---
 
   [Concept](#concetto) • [Interfaccia](#interfaccia) • [Caratteristiche](#caratteristiche) • [Setup](#setup)
@@ -101,8 +117,8 @@ npm run dev
 ---
 
 <div align="center">
-  <p><strong>World Simulation</strong> • Versione 1.0.0</p>
+  <p><strong>World Simulation</strong> • Versione 1.0.1</p>
   <p><em>Progettato per la riproduzione e l'analisi di dinamiche storiche complesse.</em></p>
   <br />
-  <code>v1.0.0 - Stabile • 2026</code>
+  <code>v1.0.1 - Stabile • 2026</code>
 </div>
