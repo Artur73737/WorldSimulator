@@ -8,10 +8,9 @@ e questo progetto aderisce alla [Versione Semantica](https://semver.org/lang/it/
 ## [1.0.1] - 2026-03-22
 
 ### Added
-- Documentazione visiva avanzata con logo dinamico SVG animato.
-- Restyling del logo con palette premium: Oro imperiale per la storia e Azzurro elettrico per la tecnologia simulativa.
-- Ottimizzazione del logo per il rendering corretto in GitHub (inline attributes).
-- Supporto per cache-busting nei file della documentazione tramite parametrizzazione degli asset.
+- Documentazione visiva avanzata con logo fotorealistico premium in formato PNG ad alta risoluzione.
+- Design del logo 3D: Sfera di vetro traslucida con antiche rune in oro e flussi di dati digitali in azzurro neon.
+- Ottimizzazione degli asset per garantire una visualizzazione perfetta e coerente su GitHub.
 - Struttura README minimalista con sezioni interattive (accordions HTML).
 - Integrazione di linee guida di design Apple-style per la documentazione.
 
