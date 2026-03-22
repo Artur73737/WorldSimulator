@@ -9,6 +9,7 @@ e questo progetto aderisce alla [Versione Semantica](https://semver.org/lang/it/
 
 ### Added
 - Documentazione visiva avanzata con logo fotorealistico premium in formato PNG ad alta risoluzione.
+- Sezione "Interfaccia" nel README con anteprima della dashboard (`home.png`).
 - Design del logo 3D: Sfera di vetro traslucida con antiche rune in oro e flussi di dati digitali in azzurro neon.
 - Ottimizzazione degli asset per garantire una visualizzazione perfetta e coerente su GitHub.
 - Struttura README minimalista con sezioni interattive (accordions HTML).

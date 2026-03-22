@@ -7,7 +7,7 @@
 
   ---
 
-  [Concept](#concetto) • [Caratteristiche](#caratteristiche) • [Architettura](#architettura) • [Setup](#setup)
+  [Concept](#concetto) • [Interfaccia](#interfaccia) • [Caratteristiche](#caratteristiche) • [Setup](#setup)
 
 </div>
 
@@ -18,6 +18,17 @@
 Un ecosistema dinamico in cui il passato riprende vita attraverso agenti LLM. **World Simulation** non è solo un software di modellazione, ma un'arena darwiniana dove popoli, etnie e imperi competono, deliberano ed evolvono sotto il peso della storia e della causalità probabilistica.
 
 Gli utenti definiscono un frammento di realtà — cinque righe per delineare un'epoca — e lasciano che il motore generativo orchestrato da Kimi LLM tracci il destino di intere civiltà.
+
+<br />
+
+## Interfaccia
+
+L'applicazione offre una visualizzazione immersiva basata su un linguaggio di design minimale e funzionale.
+
+<div align="center">
+  <img src="docs/home.png" width="90%" alt="World Simulation Dashboard" />
+  <p><em>Dashboard principale: Grafo 3D interattivo e pannelli di analisi in tempo reale.</em></p>
+</div>
 
 <br />
 
