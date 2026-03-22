@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="docs/logo.svg" width="450" alt="World Simulation Logo" />
+  <img src="docs/logo.svg?v=1.1" width="450" alt="World Simulation Logo" />
 
   # World Simulation
 
